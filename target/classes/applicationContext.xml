@@ -23,7 +23,6 @@
     <mvc:default-servlet-handler/>
     <!--   扫描包:controller-->
     <context:component-scan base-package="com.ssm.controller"/>
-
     <!-- 2.连接池  -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="${jdbc.driver}"/>
@@ -45,8 +44,7 @@
 
     <!-- 配置dao接口扫描包，动态实现dao接口可以注入到spring容器中-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <!--注入sqlSessionFactory-->
-
+        <!--注入sqlSessionFacto ry-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--扫描dao包-->
         <!-- !!!!!! -->
