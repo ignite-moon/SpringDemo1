@@ -12,11 +12,11 @@ public class Main {
     @Before
     public void before(){
         //初始化ApplicationContext和userService
-        ApplicationContext ac=new ClassPathXmlApplicationContext("classpath:spring-service.xml","classpath:spring-dao.xml");
+        ApplicationContext ac=new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService=(UserService) ac.getBean("userService");
     }
     @Test
-    public void asd(){
+    public void test(){
         //ApplicationContext ac=new ClassPathXmlApplicationContext("classpath:spring-service.xml","classpath:spring-dao.xml");
         //applicationContext.xml为spring-service、spring-dao、spring-mvc的结合体，经测试成功
         ApplicationContext ac=new ClassPathXmlApplicationContext("applicationContext.xml");
