@@ -23,4 +23,11 @@ public class UserController {
         model.addAttribute("list",list);
         return "as";
     }
+    @RequestMapping("/save.do")
+    public String insert(User user){
+        userService.insert(user);
+        return "redict:/user/as";
+    }
+
+
 }
